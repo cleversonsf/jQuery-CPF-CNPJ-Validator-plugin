@@ -33,7 +33,7 @@
                 }
                 else {
                     var cpfCnpjMsk = function (val) {
-                        return val.length === 0 || val.length >= 12 ? masks[1] : masks[0];
+                        return val.replace(/[^0-9]+/,'').length === 0 || val.replace(/[^0-9]+/,'').length >= 12 ? masks[1] : masks[0];
                     }
 
                     var opt = {
